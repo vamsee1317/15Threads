@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Header styles starts here */
+
+header{
+    background-color: rgb(34, 33, 33);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .logoDivision{
+    margin-left: 100px;
+}
+
+header .headerNav{
+    margin-right: 100px;
+}
+
+header .navbar ul{
+    list-style: none;
+    display: flex;
+    gap: 0px 60px;
+}
+header .navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    transition: 1s;
+    cursor: pointer;
+
+}
+
+header .navbar ul li a:hover{
+    color: tomato;
+
+}
