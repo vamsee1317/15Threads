@@ -1,0 +1,73 @@
+
+/* selector{
+    key1 : value1;
+    key2 : value2;
+    key3 : value3;
+} */
+
+
+/* Universal Selector */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Tag Selector */
+
+h1{
+    color : red;
+}
+
+h2{
+    color : blue;
+}
+
+h3{
+    color : green;
+}
+
+
+/* class selector (.) */
+
+.departure{
+    color: brown;
+}
+
+.arrival{
+    color: yellow;
+}
+
+.redBusLogo{
+    height: 60px;
+    width: 60px;
+}
+
+/* Grouping */
+
+.departure, .arrival{
+    font-size: 20px;
+    color: coral;
+}
+
+/* Id selector (#) */
+
+#mainHeader{
+    background-color: rgb(235, 233, 230);
+}
+
+/* Attribute selectors */
+
+p[class="departure"]{
+    color: purple;
+}
+
+pre[class="departure"]{
+    color: rgb(11, 0, 128);
+    font-style:italic;
+    font-weight: bolder;
+}
+
+
+

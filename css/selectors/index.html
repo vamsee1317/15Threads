@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini redBus UI</title>
+  <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header id="mainHeader">
+    <img src="/assets/redbusLogo.png" alt="redBusLogo" 
+     class="redBusLogo" height="60px" width="60px">
+     <!-- <h1>RedBus</h1> -->
+    <nav class="nav-links">
+      <a href="#" class="nav-item">Home</a>
+      <a href="#" class="nav-item">Bus Tickets</a>
+      <a href="#" class="nav-item">Help</a>
+    </nav>
+  </header>
+
+  <!-- Search Box Section -->
+  <section class="search-box">
+    <h2 class="section-heading">Search Buses</h2>
+
+    <form id="searchForm">
+      <input type="text" name="from" placeholder="From" class="input-field" />
+      <input type="text" name="to" placeholder="To" class="input-field" />
+      <input type="date" name="date" class="input-field" />
+
+      <button id="searchBtn" type="submit">Search Buses</button>
+    </form>
+  </section>
+
+  <!-- Results Section -->
+  <section class="bus-results">
+    <h2 class="section-heading">Available Buses</h2>
+
+    <div class="bus-card" data-bus-id="SRS123">
+      <h3 class="bus-name">SRS Travels</h3>
+      <p class="departure">9:00 AM</p>
+      <p class="arrival">6:00 PM</p>
+      <button class="book-btn" type="button">Book Now</button>
+    </div>
+
+    <div class="bus-card" data-bus-id="VRL456">
+      <h3 class="bus-name">VRL Travels</h3>
+      <p class="departure">10:30 AM</p>
+      <p class="arrival">7:00 PM</p>
+      <button class="book-btn" type="button">Book Now</button>
+    </div>
+
+        <div class="bus-card" data-bus-id="VRL456">
+      <h3 class="bus-name">VRL Travels</h3>
+      <pre class="departure">10:30 AM</pre>
+      <pre class="arrival">7:00 PM</pre>
+      <button class="book-btn" type="button">Book Now</button>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <p>&copy; 2025 redBus. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
