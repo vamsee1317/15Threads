@@ -15,7 +15,7 @@
 }
 
 /* Tag Selector */
-
+/* 
 h1{
     color : red;
 }
@@ -26,12 +26,12 @@ h2{
 
 h3{
     color : green;
-}
+} */
 
 
 /* class selector (.) */
 
-.departure{
+/* .departure{
     color: brown;
 }
 
@@ -42,24 +42,24 @@ h3{
 .redBusLogo{
     height: 60px;
     width: 60px;
-}
+} */
 
 /* Grouping */
 
-.departure, .arrival{
+/* .departure, .arrival{
     font-size: 20px;
     color: coral;
-}
+} */
 
 /* Id selector (#) */
 
-#mainHeader{
+/* #mainHeader{
     background-color: rgb(235, 233, 230);
-}
+} */
 
 /* Attribute selectors */
 
-p[class="departure"]{
+/* p[class="departure"]{
     color: purple;
 }
 
@@ -67,7 +67,31 @@ pre[class="departure"]{
     color: rgb(11, 0, 128);
     font-style:italic;
     font-weight: bolder;
+} */
+
+
+/* Combination Selectors */
+
+/* Descendant (Space) */
+
+.bus-results h3{
+    background-color: rgb(133, 132, 132);
 }
 
+/* Child Selector (>) */
 
+.bus-card>.bus-name{
+    background-color: rgb(223, 14, 14);
+}
+
+/* Adjacent Selector (+) */
+
+.bus-card+.info{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+/* GeneralSibling Selector ~ */
+.bus-card ~ .info{
+    
+}
 

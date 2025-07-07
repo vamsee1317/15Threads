@@ -1,66 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Mini redBus UI</title>
-  <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="./main.css" />
 </head>
 <body>
 
   <!-- Header Section -->
   <header id="mainHeader">
-    <img src="/assets/redbusLogo.png" alt="redBusLogo" 
-     class="redBusLogo" height="60px" width="60px">
-     <!-- <h1>RedBus</h1> -->
-    <nav class="nav-links">
-      <a href="#" class="nav-item">Home</a>
-      <a href="#" class="nav-item">Bus Tickets</a>
-      <a href="#" class="nav-item">Help</a>
-    </nav>
+    <div class="container header-content">
+      <img src="/assets/redbusLogo.png" alt="redBusLogo" class="redBusLogo" height="60" width="60" />
+      <nav class="nav-links">
+        <a href="#" class="nav-item">Home</a>
+        <a href="#" class="nav-item">Bus Tickets</a>
+        <a href="#" class="nav-item">Help</a>
+        <a href="#" class="nav-item">My Bookings</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- Search Box Section -->
-  <section class="search-box">
-    <h2 class="section-heading">Search Buses</h2>
+  <main class="container">
 
-    <form id="searchForm">
-      <input type="text" name="from" placeholder="From" class="input-field" />
-      <input type="text" name="to" placeholder="To" class="input-field" />
-      <input type="date" name="date" class="input-field" />
+    <!-- Search Box -->
+    <section class="search-box section">
+      <h2 class="section-heading">Search Buses</h2>
+      <form id="searchForm">
+        <input type="text" name="from" placeholder="From" class="input-field" />
+        <input type="text" name="to" placeholder="To" class="input-field" />
+        <input type="date" name="date" class="input-field" />
+        <button id="searchBtn" type="submit">Search</button>
+      </form>
+    </section>
 
-      <button id="searchBtn" type="submit">Search Buses</button>
-    </form>
-  </section>
+    <!-- Offers Section -->
+    <section class="offers-panel section">
+      <h2 class="section-heading">Available Offers</h2>
+      <div class="offer-card" data-offer-id="OFFER1">
+        <h3>Flat ₹100 Off</h3>
+        <p>Use code: BUS100</p>
+      </div>
+      <div class="offer-card" data-offer-id="OFFER2">
+        <h3>20% Cashback</h3>
+        <p>Use code: CASH20</p>
+      </div>
+    </section>
 
-  <!-- Results Section -->
-  <section class="bus-results">
-    <h2 class="section-heading">Available Buses</h2>
+    <!-- Filters -->
+    <section class="filter-panel section">
+      <h2 class="section-heading">Filter by Bus Type</h2>
+      <label><input type="checkbox" name="type" value="ac" /> AC</label>
+      <label><input type="checkbox" name="type" value="non-ac" /> Non-AC</label>
+      <label><input type="checkbox" name="type" value="sleeper" /> Sleeper</label>
+    </section>
 
-    <div class="bus-card" data-bus-id="SRS123">
-      <h3 class="bus-name">SRS Travels</h3>
-      <p class="departure">9:00 AM</p>
-      <p class="arrival">6:00 PM</p>
-      <button class="book-btn" type="button">Book Now</button>
-    </div>
+    <!-- Bus Results -->
+    <section class="bus-results section">
+      <h2 class="section-heading">Available Buses</h2>
 
-    <div class="bus-card" data-bus-id="VRL456">
-      <h3 class="bus-name">VRL Travels</h3>
-      <p class="departure">10:30 AM</p>
-      <p class="arrival">7:00 PM</p>
-      <button class="book-btn" type="button">Book Now</button>
-    </div>
+      <div class="bus-card" data-bus-id="SRS123">
+        <h3 class="bus-name">SRS Travels</h3>
+        <p class="departure">9:00 AM</p>
+        <p class="arrival">6:00 PM</p>
+        <button class="book-btn">Book Now</button>
+      </div>
 
-        <div class="bus-card" data-bus-id="VRL456">
-      <h3 class="bus-name">VRL Travels</h3>
-      <pre class="departure">10:30 AM</pre>
-      <pre class="arrival">7:00 PM</pre>
-      <button class="book-btn" type="button">Book Now</button>
-    </div>
-  </section>
+      <div class="bus-card" data-bus-id="VRL456">
+        <h3 class="bus-name">VRL Travels</h3>
+        <p class="departure">10:30 AM</p>
+        <p class="arrival">7:00 PM</p>
+        <button class="book-btn">Book Now</button>
+      </div>
 
-  <!-- Footer Section -->
+      <!-- Combinator Examples -->
+      <div class="info">COVID Safety Guidelines</div>
+      <div class="info">All buses are sanitized before departure.</div>
+
+      <div class="fare-section">
+        <h4>Fare Details</h4>
+        <p class="fare">Base Fare: ₹600</p>
+        <p class="tax">GST: ₹30</p>
+        <p class="total">Total: ₹630</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2025 redBus. All rights reserved.</p>
+    <div class="container">
+      <h4>Contact Us</h4>
+      <p>Email: support@redbus.in | Phone: 1800-123-456</p>
+      <p>&copy; 2025 redBus. All rights reserved.</p>
+    </div>
   </footer>
 
 </body>
