@@ -16,11 +16,20 @@
         <a href="#" class="nav-item">Bus Tickets</a>
         <a href="#" class="nav-item">Help</a>
         <a href="#" class="nav-item">My Bookings</a>
+        <a href="#" class="nav-item">Offers</a>
+        <a href="#" class="nav-item">Wallet</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
+
+    <!-- Hero Banner -->
+    <section class="hero-banner section">
+      <h1>Book Bus Tickets Online</h1>
+      <p>Find the best deals and travel safely with redBus</p>
+      <button class="cta-btn">Explore Now</button>
+    </section>
 
     <!-- Search Box -->
     <section class="search-box section">
@@ -44,6 +53,10 @@
         <h3>20% Cashback</h3>
         <p>Use code: CASH20</p>
       </div>
+      <div class="offer-card" data-offer-id="OFFER3">
+        <h3>₹150 Off for New Users</h3>
+        <p>Use code: NEW150</p>
+      </div>
     </section>
 
     <!-- Filters -->
@@ -52,41 +65,64 @@
       <label><input type="checkbox" name="type" value="ac" /> AC</label>
       <label><input type="checkbox" name="type" value="non-ac" /> Non-AC</label>
       <label><input type="checkbox" name="type" value="sleeper" /> Sleeper</label>
+      <label><input type="checkbox" name="type" value="seater" /> Seater</label>
     </section>
 
     <!-- Bus Results -->
     <section class="bus-results section">
       <h2 class="section-heading">Available Buses</h2>
+      <div class="bus-list">
+        <div class="bus-card" data-bus-id="SRS123">
+          <h3 class="bus-name">SRS Travels</h3>
+          <p class="departure">9:00 AM</p>
+          <p class="arrival">6:00 PM</p>
+          <p class="price">₹600</p>
+          <button class="book-btn">Book Now</button>
+        </div>
 
-      <div class="bus-card" data-bus-id="SRS123">
-        <h3 class="bus-name">SRS Travels</h3>
-        <p class="departure">9:00 AM</p>
-        <p class="arrival">6:00 PM</p>
-        <button class="book-btn">Book Now</button>
+        <div class="bus-card" data-bus-id="VRL456">
+          <h3 class="bus-name">VRL Travels</h3>
+          <p class="departure">10:30 AM</p>
+          <p class="arrival">7:00 PM</p>
+          <p class="price">₹650</p>
+          <button class="book-btn">Book Now</button>
+        </div>
+
+        <div class="bus-card" data-bus-id="KSRTC789">
+          <h3 class="bus-name">KSRTC</h3>
+          <p class="departure">11:00 AM</p>
+          <p class="arrival">8:00 PM</p>
+          <p class="price">₹550</p>
+          <button class="book-btn">Book Now</button>
+        </div>
       </div>
+    </section>
 
-      <div class="bus-card" data-bus-id="VRL456">
-        <h3 class="bus-name">VRL Travels</h3>
-        <p class="departure">10:30 AM</p>
-        <p class="arrival">7:00 PM</p>
-        <button class="book-btn">Book Now</button>
+    <!-- Testimonials -->
+    <section class="testimonials section">
+      <h2 class="section-heading">What Our Users Say</h2>
+      <div class="testimonial">
+        <p>"The best way to book bus tickets hassle-free!"</p>
+        <span>- Priya</span>
       </div>
-
-      <!-- Combinator Examples -->
-      <div class="info">COVID Safety Guidelines</div>
-      <div class="info">All buses are sanitized before departure.</div>
-
-      <div class="fare-section">
-        <h4>Fare Details</h4>
-        <p class="fare">Base Fare: ₹600</p>
-        <p class="tax">GST: ₹30</p>
-        <p class="total">Total: ₹630</p>
+      <div class="testimonial">
+        <p>"User interface is clean and offers are amazing!"</p>
+        <span>- Rohit</span>
       </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter section">
+      <h2 class="section-heading">Subscribe for Deals</h2>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Enter your email" class="input-field" />
+        <button type="submit" class="subscribe-btn">Subscribe</button>
+      </form>
     </section>
 
   </main>
 
-  <!-- Footer -->
+  <!-- Footer Section -->
   <footer class="footer">
     <div class="container">
       <h4>Contact Us</h4>

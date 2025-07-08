@@ -38,6 +38,45 @@ body {
   text-decoration: none;
   color: #333;
   font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links .nav-item:hover {
+  color: #d32f2f;
+}
+
+/* Hero Banner */
+.hero-banner {
+  text-align: center;
+  background: linear-gradient(to right, #ffebee, #ffffff);
+  padding: 60px 20px;
+  border-radius: 10px;
+}
+
+.hero-banner h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: #b71c1c;
+}
+
+.hero-banner p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.cta-btn {
+  padding: 12px 25px;
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #b71c1c;
 }
 
 /* Sections */
@@ -52,6 +91,13 @@ body {
 .section-heading {
   margin-bottom: 20px;
   color: #d32f2f;
+  position: relative;
+}
+
+.section-heading::after {
+  content: "\2192";
+  margin-left: 8px;
+  color: #999;
 }
 
 /* Form */
@@ -61,6 +107,12 @@ body {
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
+  width: 200px;
+}
+
+.input-field:focus {
+  border-color: #1976d2;
+  outline: none;
 }
 
 #searchBtn {
@@ -70,6 +122,11 @@ body {
   padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#searchBtn:hover {
+  background-color: #0d47a1;
 }
 
 /* Offers */
@@ -79,12 +136,27 @@ body {
   padding: 15px;
   margin-bottom: 15px;
   border-radius: 6px;
+  transition: transform 0.3s;
+}
+
+.offer-card:hover {
+  transform: scale(1.02);
+}
+
+.offer-card:first-child {
+  background-color: #ffe0e0;
+}
+
+.offer-card h3::before {
+  content: "\1F4B8 ";
 }
 
 /* Filters */
 .filter-panel label {
   margin-right: 20px;
   font-weight: 500;
+  display: inline-block;
+  margin-bottom: 10px;
 }
 
 /* Bus Cards */
@@ -93,6 +165,11 @@ body {
   padding: 15px;
   border-radius: 8px;
   margin-bottom: 20px;
+  transition: box-shadow 0.3s;
+}
+
+.bus-card:hover {
+box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .bus-card > h3 {
@@ -103,6 +180,11 @@ body {
   margin: 5px 0;
 }
 
+.bus-name::first-letter {
+  font-size: 24px;
+  font-weight: bold;
+}
+
 .book-btn {
   background-color: #43a047;
   color: white;
@@ -111,6 +193,15 @@ body {
   border-radius: 4px;
   margin-top: 10px;
   cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.book-btn:hover {
+  background-color: #2e7d32;
+}
+
+.bus-card:nth-child(even) {
+  background-color: #e4cdcd;
 }
 
 /* Combinators */
@@ -126,6 +217,44 @@ body {
   font-weight: bold;
 }
 
+/* Testimonials */
+.testimonials .testimonial {
+  background-color: #f3f4f6;
+  padding: 20px;
+  border-left: 4px solid #1976d2;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.testimonials .testimonial span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Newsletter */
+.newsletter-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.subscribe-btn {
+  background-color: #d32f2f;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.subscribe-btn:hover {
+  background-color: #42c628;
+}
+
 /* Footer */
 .footer {
   background-color: #ececec;
@@ -133,4 +262,9 @@ body {
   text-align: center;
   font-size: 14px;
   color: #555;
+}
+
+.footer p::selection {
+  background-color: #1976d2;
+  color: white;
 }
