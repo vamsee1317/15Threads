@@ -1,0 +1,16 @@
+.container{
+    width: 90%;
+    margin: 100px auto;
+    border: 1px solid black;
+    height: 1500px;
+    /* Background props */
+    background-color: #f2f2f2;
+    background-image: url("https://i.pinimg.com/736x/cf/35/91/cf3591df9bfec3802311fbf497c6ba84.jpg");
+    background-repeat: no-repeat;
+    background-size:50% 50%;
+    background-position: center;
+    background-attachment:scroll;
+    /* End of background props */
+    /* shorthand for Bg props */
+    
+}

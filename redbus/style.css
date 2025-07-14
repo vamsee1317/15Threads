@@ -1,0 +1,286 @@
+/* Base */
+/* Universal Selector - Applies to all elements. Used for box model resets and consistent font styling. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Box Model */
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Tag Selector for body element. Also demonstrates background and text color usage. */
+body {
+  background-color: #f8f9fa; /* Background Property */
+  color: #333;
+}
+
+/* Class Selector to center content and control width/padding (Box Model) */
+.container {
+  max-width: 1100px;
+  margin: 0 auto; /* Box Model */
+  padding: 0 20px; /* Box Model */
+}
+
+/* Header */
+/* ID Selector used to style header section with sticky positioning */
+#mainHeader {
+  background-color: white; /* Background Property */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Visual depth */
+  padding: 15px 0; /* Box Model */
+  position: sticky; /* Positioning */
+  top: 0;
+  z-index: 10;
+}
+
+/* Flexbox layout for horizontal alignment */
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Descendant Selector, styling navigation links */
+.nav-links .nav-item {
+  margin-left: 20px; /* Box Model */
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+/* Pseudo-class selector for hover state */
+.nav-links .nav-item:hover {
+  color: #d32f2f;
+}
+
+/* Hero Banner */
+/* Class Selector - background gradient and padding (Box Model + Background) */
+.hero-banner {
+  text-align: center;
+  background: linear-gradient(to left, #ffebee, #dd0606); /* Background Property */
+  padding: 60px 20px; /* Box Model */
+  border-radius: 10px; /* Box Model */
+}
+
+.hero-banner h1 {
+  font-size: 36px;
+  margin-bottom: 15px; /* Box Model */
+  color: #b71c1c;
+}
+
+.hero-banner p {
+  font-size: 18px;
+  margin-bottom: 25px; /* Box Model */
+}
+
+.cta-btn {
+  padding: 12px 25px; /* Box Model */
+  background-color: #d32f2f; /* Background Property */
+  color: white;
+  border: none;
+  border-radius: 6px; /* Box Model */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #b71c1c; /* Background Property */
+}
+
+/* Sections */
+.section {
+  margin: 40px 0; /* Box Model */
+  background-color: #fff;
+  padding: 25px; /* Box Model */
+  border-radius: 10px; /* Box Model */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04); /* Visual Depth */
+}
+
+.section-heading {
+  margin-bottom: 20px;
+  color: #d32f2f;
+  position: relative; /* Positioning */
+}
+
+/* Pseudo-element to add decorative arrow after heading */
+.section-heading::after {
+  content: "\2192";
+  margin-left: 8px;
+  color: #999;
+}
+
+/* Form */
+.input-field {
+  padding: 10px; /* Box Model */
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc; /* Box Model */
+  border-radius: 6px; /* Box Model */
+  width: 200px;
+}
+
+.input-field:focus {
+  border-color: #1976d2; /* Pseudo-class */
+  outline: none;
+}
+
+/* ID Selector - search button styling */
+#searchBtn {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px; /* Box Model */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#searchBtn:hover {
+  background-color: #0d47a1; /* Pseudo-class */
+}
+
+/* Offers */
+.offer-card {
+  background-color: #fff0f0;
+  border-left: 5px solid #d32f2f; /* Box Model */
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 6px; /* Box Model */
+  transition: transform 0.3s;
+}
+
+.offer-card:hover {
+  transform: scale(1.02); /* Pseudo-class for interaction */
+}
+
+/* Pseudo-class selector to style first card differently */
+.offer-card:first-child {
+  background-color: #ffe0e0;
+}
+
+/* Pseudo-element to insert symbol before heading */
+.offer-card h3::before {
+  content: "\1F4B8 ";
+}
+
+/* Filters */
+.filter-panel label {
+  margin-right: 20px; /* Box Model */
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/* Bus Cards */
+.bus-card {
+  border: 1px solid #ccc;
+  padding: 15px; /* Box Model */
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s;
+}
+
+.bus-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Child selector used here */
+.bus-card > h3 {
+  color: #d32f2f;
+}
+
+.bus-card p {
+  margin: 5px 0; /* Box Model */
+}
+
+/* Pseudo-element to style first letter */
+.bus-name::first-letter {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.book-btn {
+  background-color: #43a047;
+  color: white;
+  padding: 8px 12px; /* Box Model */
+  border: none;
+  border-radius: 4px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.book-btn:hover {
+  background-color: #2e7d32;
+}
+
+/* Pseudo-class for nth-child selector */
+.bus-card:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Combinators */
+.info + .info {
+  background-color: #fff3cd;
+  padding: 10px;
+  border-left: 4px solid #ffa000;
+  margin-top: 10px;
+}
+
+.fare-section .fare ~ p {
+  color: #00796b;
+  font-weight: bold;
+}
+
+/* Testimonials */
+.testimonials .testimonial {
+  background-color: #f3f4f6;
+  padding: 20px;
+  border-left: 4px solid #1976d2;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.testimonials .testimonial span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Newsletter */
+.newsletter-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.subscribe-btn {
+  background-color: #d32f2f;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.subscribe-btn:hover {
+  background-color: #c62828;
+}
+
+/* Footer */
+.footer {
+  background-color: #ececec;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Pseudo-element for text selection */
+.footer p::selection {
+  background-color: #1976d2;
+  color: white;
+}
