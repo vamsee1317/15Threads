@@ -33,7 +33,7 @@ body {
 
 /* Flexbox layout for horizontal alignment */
 .header-content {
-  display: flex;
+  display: flex; /* Flexbox */
   justify-content: space-between;
   align-items: center;
 }
@@ -56,7 +56,7 @@ body {
 /* Class Selector - background gradient and padding (Box Model + Background) */
 .hero-banner {
   text-align: center;
-  background: linear-gradient(to left, #ffebee, #dd0606); /* Background Property */
+  background: linear-gradient(to right, #ffebee, #ffffff); /* Background Property */
   padding: 60px 20px; /* Box Model */
   border-radius: 10px; /* Box Model */
 }
@@ -110,6 +110,14 @@ body {
 }
 
 /* Form */
+/* Flexbox used for layout of input fields and button */
+#searchForm {
+  display: flex; /* Flexbox */
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
 .input-field {
   padding: 10px; /* Box Model */
   margin-right: 10px;
@@ -140,7 +148,15 @@ body {
 }
 
 /* Offers */
+/* Flexbox layout to arrange offers side by side */
+.offerContainer {
+  display: flex; /* Flexbox */
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
 .offer-card {
+  flex: 1 1 200px; /* Flex Grow, Shrink, Basis */
   background-color: #fff0f0;
   border-left: 5px solid #d32f2f; /* Box Model */
   padding: 15px;
@@ -172,12 +188,22 @@ body {
 }
 
 /* Bus Cards */
+/* Flex container for listing bus cards horizontally if needed */
+.bus-list{
+  display: flex; /* Flexbox */
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .bus-card {
   border: 1px solid #ccc;
   padding: 15px; /* Box Model */
   border-radius: 8px;
   margin-bottom: 20px;
   transition: box-shadow 0.3s;
+  width: 220px;
 }
 
 .bus-card:hover {
@@ -232,6 +258,90 @@ body {
   font-weight: bold;
 }
 
+/* ============================
+   Popular Routes Section
+   ============================ */
+.routeContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.route-card {
+  background-color: #e3f2fd;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1 1 30%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.route-card:hover {
+  transform: translateY(-5px);
+}
+
+.route-card h3 {
+  color: #1976d2;
+  margin-bottom: 10px;
+}
+
+/* ============================
+   Download App Section
+   ============================ */
+.download-app {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+}
+
+.download-app img {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.download-app-content {
+  flex: 1;
+}
+
+.download-app-content p {
+  margin: 10px 0 15px;
+}
+
+/* ============================
+   Features Section
+   ============================ */
+.featuresContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.feature-box {
+  flex: 1 1 30%;
+  background-color: #f1f8e9;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.feature-box i {
+  font-size: 30px;
+  color: #4caf50;
+  margin-bottom: 10px;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+}
+
+
 /* Testimonials */
 .testimonials .testimonial {
   background-color: #f3f4f6;
@@ -249,8 +359,9 @@ body {
 }
 
 /* Newsletter */
+/* Flexbox to arrange input and button in same line */
 .newsletter-form {
-  display: flex;
+  display: flex; /* Flexbox */
   flex-wrap: wrap;
   gap: 10px;
   align-items: center;

@@ -1,0 +1,71 @@
+/* 
+
+
+Flex vs Grid :
+----------------
+    - Flex box is a one-dimensional layout system, meaning it's used for either horizontal or vertical layout. Grid is a two-dimensional layout system, meaning it can be used for both horizontal and vertical layout.
+
+*/
+
+
+.container{
+    height: 500px;
+    border: 1px solid black;
+    border-radius: 8px;
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    /* flex-direction: row;
+    flex-wrap: wrap;
+    flex-flow: row wrap; */
+    justify-content: space-around;
+    align-items: center;
+    align-content:center;
+
+}
+
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    border-radius: 8px;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+}
+
+.boxes{
+    height: 40px;
+    width: 40px;
+    background-color: black;
+        display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    border-radius: 8px;
+    margin: 2px;
+}
+
+.box1{
+    order: 100;
+    flex-shrink: 2;
+}
+
+/* .box2{
+    flex-grow: 1;
+    order: 200;
+}
+
+.box3{
+    flex-grow: 3;
+}
+.box4{
+    flex-grow: 1;
+    order: 500;
+} */
