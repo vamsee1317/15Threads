@@ -80,11 +80,11 @@ body {
   border-radius: 6px; /* Box Model */
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 1s;
 }
 
 .cta-btn:hover {
-  background-color: #b71c1c; /* Background Property */
+  background-color: #5fb71c; /* Background Property */
 }
 
 /* Sections */
@@ -101,6 +101,101 @@ body {
   color: #d32f2f;
   position: relative; /* Positioning */
 }
+
+/* === Transitions and Transforms === */
+
+/* Route Card: Zoom on hover using transform and transition */
+.route-card {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease-in-out; /* transition used */
+}
+
+.route-card:hover {
+  transform: scale(1.03); /* transform used */
+}
+
+/* Feature Box: lift up slightly on hover */
+.feature-box {
+  display: inline-block;
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease; /* transition used */
+}
+
+.feature-box:hover {
+  transform: translateY(-5px); /* lift on hover */
+}
+
+/* Call-to-action button hover effect */
+.cta-btn {
+  padding: 10px 20px;
+  background-color: #d32f2f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.4s, transform 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #b71c1c;
+  transform: scale(1.05); /* slight zoom */
+}
+
+/* === Bus Cards with Images === */
+
+.bus-cards-section {
+  padding: 2rem;
+  background-color: #f1f1f1;
+}
+
+.bus-cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.bus-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 250px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.bus-card:hover {
+  transform: scale(1.05); /* transform used */
+}
+
+.bus-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.bus-card-content {
+  padding: 1rem;
+}
+
+.bus-card-content h4 {
+  margin: 0 0 0.5rem;
+}
+
+.bus-card-content p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
 
 /* Pseudo-element to add decorative arrow after heading */
 .section-heading::after {

@@ -1,0 +1,37 @@
+/* 
+
+    Transformation : 
+    Transition : 
+
+*/
+
+.container{
+    border: 1px solid black;
+    width: 90%;
+    margin: 100px auto;
+    height: 400px;
+}
+
+.container .box{
+    width: 120px;
+    height: 120px;
+    background-color: #df2e2e;
+    /* Transform Props */
+    /* transform: rotate(80deg);
+    transform: scaleY(2);
+    transform: translateY(100px);
+    transform: skewY(30deg); */
+    /* transform: matrix(); */
+/* Tranistion Props */
+    /* transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: cubic-bezier(.01,.98,.99,.01);
+    transition-delay: 2s; */
+    transition: all 2s cubic-bezier(.01,.98,.99,.01) 2s;
+}
+
+.box:hover{
+    height: 200px;
+    width: 200px;
+    background-color: aqua;
+}
