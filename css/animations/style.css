@@ -1,0 +1,66 @@
+/* 
+
+    CSS Animations : 
+    1. Keyframes
+    2. Animation
+
+*/
+
+
+.container{
+    height: 90vh;
+    width: 90vw;
+    border: 1px solid black;
+    margin: 40px auto;
+    position: relative;
+}
+
+.container .box{
+    width: 120px;
+    height: 120px;
+    background-color: red;
+    border-radius: 10px;
+    position: absolute;
+    animation-name: box;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-direction: alternate-reverse;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+}
+
+
+@keyframes box {
+    0%{
+        background-color: red;
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+
+    25%{
+        background-color: blue;
+        left: 95%;
+        top: 0;
+    }
+
+    50%{
+        background-color: green;
+        left: 90%;
+        top: 90%;
+    }
+
+    75%{
+        background-color: yellow;
+        left: 0;
+        top: 90%;
+    }
+
+    100%{
+        background-color: red;
+        left: 0;
+        top: 0;
+        border-radius: 50%;
+    }
+}
