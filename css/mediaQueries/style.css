@@ -1,0 +1,142 @@
+/* Media queries in CSS allow web designers to apply different styles to a website based on the characteristics of the device or browser being used to view the website. This allows designers to create responsive designs that adapt to different screen sizes, orientations, resolutions, and other characteristics.
+
+Media queries are written as conditional statements that target specific ranges of viewport sizes, such as min-width and max-width, as well as other features like resolution, orientation, and device type. When a user's device matches the conditions specified in a media query, the styles within that query are applied.
+
+For example, a media query may be used to apply different styles to a website when it is viewed on a mobile device versus a desktop or tablet. This can include changing the layout, font sizes, colors, and other design elements to ensure that the website looks and functions correctly on different devices.
+
+Media queries are an essential tool for creating responsive web designs that provide a consistent and user-friendly experience across a wide range of devices and screen sizes. By using media queries effectively, designers can accommodate the needs of users who may access their websites on smartphones, tablets, laptops, desktops, and other devices. */
+
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container .card h2,p{
+        margin: 8px 0px;
+    }
+
+    .container .card button{
+        margin: 5px 0px;
+        padding: 4px 16px;
+        border: none;
+        border-radius: 5px;
+        background-color: #4CAF50;
+        color: #fff;
+        cursor: pointer;
+        font-size: large;
+    }
+
+
+@media (min-width: 1281px) {
+  
+  /* CSS */
+  
+}
+
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 426px to 768px
+*/
+
+@media (min-width: 426px) and (max-width: 768px) {
+  
+  /* CSS */
+  .container{
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+  }
+    .card{
+        width: 280px;
+        flex-grow: 1;
+        border: 1px solid grey;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .card img{
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .card p{
+        font-size: 12px;
+        text-align: justify;
+    }
+  
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 425px) {
+  
+    .container{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+
+    .container .card{
+        width: 90%;
+        /* margin: 20px auto; */
+    }
+
+    .container .card img{
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .container .card h2{
+        margin: 0px;
+    }
+  
+}
+
+
